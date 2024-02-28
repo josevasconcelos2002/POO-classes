@@ -1,22 +1,24 @@
 package aula2;
 
+import java.util.Scanner;
+
 public class Ficha2 {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int valor = 0;
+        System.out.print(" Número de inteiros a ler ?: ");
+        int n = sc.nextInt();
 
-    }
+        int[] valores = new int[n];
 
-}
-
-public class Exercicio1 {
-
-    public int minArray(int[] array) {
-        int min = array[0];
-        for (int elemento : array) {
-            if (elemento < min) {
-                min = elemento;
-            }
+        for (int i = 0; i < n; i++) {
+            valor = sc.nextInt();
+            valores[i] = valor;
         }
-        return min;
+        sc.close();
+        System.out.println("O valor minimo introduzido é: " + Exercicio1.minArray(valores));
+        ;
     }
+
 }
